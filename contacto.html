@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Data Stream Analytics</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f9fd;
+        --panel: rgba(255, 255, 255, 0.88);
+        --text: #14263f;
+        --muted: #54657a;
+        --accent: #2456a6;
+        --line: rgba(15, 39, 71, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+          radial-gradient(circle at 14% 18%, rgba(179, 135, 40, 0.08), transparent 24%),
+          radial-gradient(circle at 88% 100%, rgba(15, 39, 71, 0.08), transparent 24%),
+          linear-gradient(180deg, #f7faff 0%, #ffffff 55%, #f2f6fb 100%);
+        color: var(--text);
+      }
+
+      .legal-shell {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 42px 0 64px;
+      }
+
+      .legal-back,
+      .legal-nav a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .legal-back {
+        display: inline-flex;
+        margin-bottom: 20px;
+      }
+
+      .legal-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .legal-card {
+        padding: 28px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: 0 24px 48px rgba(15, 39, 71, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
+      .contact-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+
+      p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      h2 {
+        margin: 28px 0 10px;
+        font-size: 1.2rem;
+        color: var(--text);
+      }
+
+      @media (max-width: 720px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="legal-shell">
+      <a class="legal-back" href="./index.html">Volver a la landing</a>
+      <nav class="legal-nav" aria-label="Navegacion legal secundaria">
+        <a href="./privacy.html">Privacidad</a>
+        <a href="./legal.html">Terminos</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+
+      <article class="legal-card">
+        <h1>Contacto</h1>
+        <p>Esta pagina publica informacion institucional verificable del operador del sitio para reforzar transparencia y facilitar revisiones manuales o consultas generales.</p>
+        <h2>Datos institucionales</h2>
+        <div class="contact-grid">
+          <div>
+            <p><strong>Nombre legal</strong></p>
+            <p>Data stream analytics</p>
+          </div>
+          <div>
+            <p><strong>Pais</strong></p>
+            <p>Argentina</p>
+          </div>
+          <div>
+            <p><strong>Direccion</strong></p>
+            <p>Alem 975 P. Juan, Trelew</p>
+          </div>
+          <div>
+            <p><strong>Provincia y codigo postal</strong></p>
+            <p>Chubut, 9100</p>
+          </div>
+          <div>
+            <p><strong>Telefono</strong></p>
+            <p><a href="tel:+542805092091">+54 2805092091</a></p>
+          </div>
+          <div>
+            <p><strong>Sitio web</strong></p>
+            <p><a href="https://trustnova.org/" target="_blank" rel="noreferrer">https://trustnova.org/</a></p>
+          </div>
+        </div>
+        <h2>Canales de solicitud</h2>
+        <p>Las consultas generales, comerciales o relacionadas con privacidad pueden canalizarse mediante el telefono publicado en esta pagina o a traves del formulario de la landing. No se publica un email publico por el momento.</p>
+      </article>
+    </main>
+  </body>
+</html>

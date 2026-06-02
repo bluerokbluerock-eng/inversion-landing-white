@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portal educativo con noticias y contexto para aprender sobre mercados digitales, acciones, forex e indices globales."
+    />
+    <meta
+      property="og:title"
+      content="Data Stream Analytics | Noticias y aprendizaje de mercados"
+    />
+    <meta
+      property="og:description"
+      content="Portal educativo con noticias y contexto para aprender sobre mercados digitales, acciones, forex e indices globales."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Data Stream Analytics" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="DData Stream Analytics | Noticias y aprendizaje de mercados"
+    />
+    <meta
+      name="twitter:description"
+      content="Portal educativo con noticias y contexto para aprender sobre mercados digitales, acciones, forex e indices globales."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Tracking script -->
+    <script type='application/javascript'>
+    if (!window.KTracking){window.KTracking={collectNonUniqueClicks: false, multiDomain: false, R_PATH: 'https://trustnova.org/noticias-financieras', P_PATH:'https://trustnova.org/09f5814/postback', listeners: [], reportConversion: function(){this.queued = arguments;}, getSubId: function(fn) {this.listeners.push(fn);}, ready: function(fn) {this.listeners.push(fn);} };}(function(){var a=document.createElement('script');a.type='application/javascript';a.async=true;a.src='https://trustnova.org/js/k.min.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(a,s)})();
+    </script><noscript><img height='0' width='0' alt='' src='https://trustnova.org/noticias-financieras'/></noscript>
+    <title>Data Stream Analytics | Noticias y aprendizaje de mercados</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="container topbar-inner">
+          <a class="brand" href="#inicio" aria-label="Inicio de Data Stream Analytics">
+            <img class="brand-logo" src="./assets/logo-dfe.svg" alt="Data Stream Analytics" />
+          </a>
+
+          <nav class="topnav" aria-label="Secciones principales">
+            <a href="#noticias">Noticias</a>
+            <a href="#educacion">Educacion</a>
+            <a href="#noticias">Activos</a>
+            <a href="#footer">Disclaimer</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-section" id="inicio">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">Plataforma educativa de mercado</span>
+              <h1>Noticias Financieras Diarias con Massive y contexto util</h1>
+              <p class="hero-subtitle">
+                Cobertura reciente del mercado para leer titulares con mas criterio
+              </p>
+              <p class="hero-description">
+                Data Stream Analytics ahora consume un feed privado de Massive para mostrar noticias
+                reales, fuentes recientes y activos que estan concentrando la atencion del mercado.
+              </p>
+
+              <div class="hero-actions">
+                <a class="button button-primary" href="#noticias">Ver Noticias</a>
+                <a class="button button-secondary" href="#noticias">Explorar Activos</a>
+              </div>
+
+              <div class="hero-note">
+                <span class="status-dot"></span>
+                <span id="hero-feed-status">Sincronizando cobertura reciente desde Massive</span>
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="visual-card main-chart">
+                <div class="visual-header">
+                  <span>Panorama diario</span>
+                  <strong>Massive News Feed</strong>
+                </div>
+                <div class="chart-area">
+                  <div class="grid-lines"></div>
+                  <svg viewBox="0 0 420 220" class="chart-svg">
+                    <path
+                      d="M10 175 C 55 165, 78 122, 120 130 S 185 192, 240 140 S 320 62, 410 85"
+                      fill="none"
+                      stroke="url(#lineGradient)"
+                      stroke-width="6"
+                      stroke-linecap="round"
+                    ></path>
+                    <defs>
+                      <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#7fb0ff"></stop>
+                        <stop offset="100%" stop-color="#145df5"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="visual-stats">
+                  <div>
+                    <span>Noticias cargadas</span>
+                    <strong id="market-article-count">0 hoy</strong>
+                  </div>
+                  <div>
+                    <span>Fuentes activas</span>
+                    <strong id="market-publisher-count">0 medios</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visual-card floating-card">
+                <span>En tendencia</span>
+                <strong id="featured-tickers">Esperando titulares</strong>
+                <small>
+                  Los tickers mas repetidos del feed reciente se muestran aqui con menor prioridad
+                  para cripto.
+                </small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ticker-section" aria-label="Tickers destacados" id="ticker-section" hidden>
+          <div class="container">
+            <div class="ticker-row" id="ticker-row"></div>
+          </div>
+        </section>
+
+        <section class="education-section" id="educacion">
+          <div class="container education-card">
+            <div class="education-copy">
+              <span class="section-kicker">Importante</span>
+              <h2>
+                Esta plataforma es unicamente con fines educativos. No ofrecemos asesoria
+                financiera.
+              </h2>
+              <p>
+                Nuestro objetivo es ayudarte a comprender noticias, indicadores, activos y
+                dinamicas del mercado para que desarrolles mejor criterio propio.
+              </p>
+            </div>
+
+            <div class="education-points">
+              <article>
+                <strong>Fuente estructurada</strong>
+                <p>Consumimos Massive para acercarte noticias reales y metadatos utiles.</p>
+              </article>
+              <article>
+                <strong>Sin recomendaciones</strong>
+                <p>No damos senales, promesas de rentabilidad ni instrucciones de inversion.</p>
+              </article>
+              <article>
+                <strong>Lectura responsable</strong>
+                <p>Promovemos analisis, gestion del riesgo y pensamiento critico.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="news-section" id="noticias">
+          <div class="container">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">Cobertura reciente</span>
+                <h2>Noticias reales agrupadas por clase de activo</h2>
+              </div>
+
+              <label class="search-box" aria-label="Buscar noticias">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M10.5 4a6.5 6.5 0 1 0 4.05 11.58l4.44 4.44 1.41-1.41-4.44-4.44A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <input
+                  id="search-input"
+                  type="search"
+                  placeholder="Buscar por activo, ticker, fuente, sentimiento o tema"
+                />
+              </label>
+            </div>
+
+            <div class="news-filters-shell">
+              <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Clases de activo"></div>
+              <div class="asset-chip-row" id="asset-chip-row" aria-label="Tickers relacionados"></div>
+
+              <div class="news-filter-summary" aria-live="polite">
+                <div class="news-filter-summary-copy">
+                  <span class="panel-kicker" id="summary-label">Cobertura general</span>
+                  <strong id="summary-title">Pulso reciente del mercado financiero</strong>
+                  <p id="summary-description"></p>
+                </div>
+
+                <div class="news-filter-summary-points" id="summary-points"></div>
+              </div>
+            </div>
+
+            <div class="news-layout">
+              <aside class="trending-panel">
+                <span class="panel-kicker">Trending news</span>
+                <h3>Lo mas reciente</h3>
+                <div class="trending-list" id="trending-list"></div>
+              </aside>
+
+              <div class="news-grid" id="news-grid"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <div class="container">
+            <div class="cta-card">
+              <span class="section-kicker">Feed conectado</span>
+              <h2>Mantente informado con titulares recientes y contexto verificable</h2>
+              <p>
+                Cada tarjeta enlaza a la fuente original para que puedas contrastar el titular,
+                revisar el medio y seguir tu propio proceso de analisis.
+              </p>
+              <a class="button button-primary" href="#noticias">Revisar noticias</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lead-section" id="contacto">
+          <div class="container">
+            <div class="lead-card">
+              <div class="lead-copy">
+                <span class="section-kicker">Contacto</span>
+                <h2>Solicita una llamada para recibir orientación informativa.</h2>
+                <p>
+                  Comparte tus datos y nuestro equipo te contactará para ayudarte a navegar la
+                  plataforma, resolver dudas generales y ampliar la información disponible.
+                </p>
+              </div>
+
+              <form class="lead-form" id="lead-form" novalidate>
+                <div class="lead-form-grid">
+                  <label class="lead-field">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" />
+                    <small class="field-error" data-error-for="nombre"></small>
+                  </label>
+
+                  <label class="lead-field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="tu@correo.com" autocomplete="email" />
+                    <small class="field-error" data-error-for="email"></small>
+                  </label>
+
+                  <div class="lead-field">
+                    <span>Pais</span>
+                    <div class="country-picker" data-country-picker>
+                      <button
+                        class="country-picker-button"
+                        type="button"
+                        id="lead-country-picker-button"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <img src="assets/flags/mx.svg" alt="" class="country-flag" id="lead-country-flag" />
+                        <span id="lead-country-picker-label">Mexico (+52)</span>
+                        <span class="country-picker-caret" aria-hidden="true">&#9662;</span>
+                      </button>
+                      <select name="phoneCountry" id="lead-phone-country" class="country-select-native" tabindex="-1" aria-hidden="true">
+                        <option value="pe">Peru (+51)</option>
+                        <option value="mx" selected>Mexico (+52)</option>
+                        <option value="ar">Argentina (+54)</option>
+                        <option value="cl">Chile (+56)</option>
+                        <option value="uy">Uruguay (+598)</option>
+                        <option value="co">Colombia (+57)</option>
+                        <option value="br">Brazil (+55)</option>
+                      </select>
+                      <div class="country-picker-list" role="listbox" aria-labelledby="lead-country-picker-button">
+                        <button type="button" role="option" data-country-code="pe">
+                          <img src="assets/flags/pe.svg" alt="" /> Peru (+51)
+                        </button>
+                        <button type="button" role="option" data-country-code="mx">
+                          <img src="assets/flags/mx.svg" alt="" /> Mexico (+52)
+                        </button>
+                        <button type="button" role="option" data-country-code="ar">
+                          <img src="assets/flags/ar.svg" alt="" /> Argentina (+54)
+                        </button>
+                        <button type="button" role="option" data-country-code="cl">
+                          <img src="assets/flags/cl.svg" alt="" /> Chile (+56)
+                        </button>
+                        <button type="button" role="option" data-country-code="uy">
+                          <img src="assets/flags/uy.svg" alt="" /> Uruguay (+598)
+                        </button>
+                        <button type="button" role="option" data-country-code="co">
+                          <img src="assets/flags/co.svg" alt="" /> Colombia (+57)
+                        </button>
+                        <button type="button" role="option" data-country-code="br">
+                          <img src="assets/flags/br.svg" alt="" /> Brazil (+55)
+                        </button>
+                      </div>
+                    </div>
+                    <small class="field-error" data-error-for="phoneCountry"></small>
+                  </div>
+
+                  <label class="lead-field">
+                    <span>Telefono</span>
+                    <input type="tel" name="telefono" placeholder="+52 123 456 789" autocomplete="tel" />
+                    <small class="field-error" data-error-for="telefono"></small>
+                  </label>
+
+                  <label class="lead-field">
+                    <span>Línea de interés</span>
+                    <select name="interes">
+                      <option value="">Selecciona una opcion</option>
+                      <option value="Noticias de mercado">Noticias de mercado</option>
+                      <option value="Educacion financiera">Educacion financiera</option>
+                      <option value="Seguimiento de activos">Seguimiento de activos</option>
+                      <option value="Consulta general">Consulta general</option>
+                    </select>
+                    <small class="field-error" data-error-for="interes"></small>
+                  </label>
+                </div>
+
+                <input type="hidden" name="subid" id="lead-subid" value="" />
+                <div id="lead-offer-link" data-url="{offer}" style="display:none;" aria-hidden="true"></div>
+
+                <label class="lead-consent">
+                  <input type="checkbox" name="consentimiento" />
+                  <p>Acepto el tratamiento de mis datos para recibir contacto informativo, seguimiento comercial y comunicaciones publicitarias relacionadas con esta plataforma educativa, de acuerdo con las <a href="./privacy.html"><strong>Politicas de privacidad</strong></a>.</p>
+                </label>
+                <small class="field-error consent-error" data-error-for="consentimiento"></small>
+
+                <div class="lead-status" id="lead-status" aria-live="polite"></div>
+                <button class="button button-primary" type="submit" id="lead-submit">Solicitar llamada</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand footer-brand" href="#inicio">
+              <img class="brand-logo" src="./assets/logo-dfe-dark.svg" alt="Data Stream Analytics" />
+            </a>
+            <p class="footer-brand-text">Experiencia academica y lectura de mercado para operar con mayor contexto, comprender tendencias y tomar decisiones con mejor criterio informativo.</p>
+            <div class="footer-contact-list">
+              <a href="tel:+542805092091">+54 2805092091</a>
+              <a href="./contacto.html">Alem 975 P. Juan, Trelew, Chubut, 9100, Argentina</a>
+              <a href="https://trustnova.org/" target="_blank" rel="noreferrer">Sitio de referencia: trustnova.org</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <span class="footer-column-title">Mercados</span>
+            <a href="#noticias">Noticias</a>
+            <a href="#noticias">Activos</a>
+            <a href="#inicio">Inicio</a>
+          </div>
+          <div class="footer-column">
+            <span class="footer-column-title">Recursos</span>
+            <a href="#educacion">Educacion</a>
+            <a href="#contacto">Formulario</a>
+            <a href="#footer">Disclaimer</a>
+          </div>
+          <div class="footer-column">
+            <span class="footer-column-title">Empresa</span>
+            <a href="./contacto.html">Contacto</a>
+            <a href="#inicio">Nosotros</a>
+            <a href="#noticias">Actualidad</a>
+          </div>
+          <div class="footer-column">
+            <span class="footer-column-title">Legal</span>
+            <a href="./legal.html">Terminos y condiciones</a>
+            <a href="./privacy.html">Politica de privacidad</a>
+            <a href="./contacto.html">Contacto</a>
+          </div>
+          <div class="footer-disclaimer-row">
+            <p class="footer-disclaimer">Los resultados pueden variar. Toda inversion conlleva riesgo. Esta pagina no ofrece asesoria financiera personalizada y no forma parte de la red de Meta o Facebook Inc.</p>
+            <p class="footer-disclaimer footer-disclaimer-secondary">El contenido es educativo e informativo; cada usuario es responsable de sus decisiones financieras o comerciales.</p>
+          </div>
+          <div class="footer-meta">
+            <span>&copy; 2026 Data Stream Analytics. Todos los derechos reservados.</span>
+            <a href="./privacy.html">Politica de privacidad</a>
+            <a href="./legal.html">Terminos y condiciones</a>
+            <a href="./contacto.html">Contacto</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

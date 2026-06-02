@@ -1,0 +1,12 @@
+<svg width="420" height="56" viewBox="0 0 420 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="52" height="52" rx="16" fill="url(#bg)"/>
+  <path d="M16 15H26.5C34.7523 15 40 19.8892 40 28C40 36.1108 34.7523 41 26.5 41H16V15ZM25.5 34.5C29.9918 34.5 32.5 31.9442 32.5 28C32.5 24.0558 29.9918 21.5 25.5 21.5H22.5V34.5H25.5Z" fill="white"/>
+  <path d="M39 15H47V21H39V15ZM39 25H47V31H39V25ZM39 35H47V41H39V35Z" fill="#CFE0FF"/>
+  <text x="66" y="31" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Data <tspan fill="#145DF5">Stream Analytics</tspan></text>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="49" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#145DF5"/>
+    </linearGradient>
+  </defs>
+</svg>
